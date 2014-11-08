@@ -755,19 +755,117 @@
 }
 #u57 {
   position:absolute;
+  left:41px;
+  top:556px;
+  width:30px;
+  height:30px;
+}
+#u57_img {
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:30px;
+  height:30px;
+}
+#u58 {
+  position:absolute;
+  left:2px;
+  top:7px;
+  width:26px;
+  visibility:hidden;
+  word-wrap:break-word;
+}
+#u59 {
+  position:absolute;
+  left:81px;
+  top:556px;
+  width:171px;
+  height:16px;
+  font-family:'Arial-BoldMT', 'Arial Bold', 'Arial';
+  font-weight:700;
+  font-size:14px;
+  color:#666666;
+}
+#u59_img {
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:171px;
+  height:16px;
+}
+#u60 {
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:171px;
+  word-wrap:break-word;
+}
+#u61 {
+  position:absolute;
+  left:39px;
+  top:589px;
+  width:312px;
+  height:10px;
+}
+#u61_start {
+  position:absolute;
+  left:0px;
+  top:-5px;
+  width:18px;
+  height:20px;
+}
+#u61_end {
+  position:absolute;
+  left:295px;
+  top:-5px;
+  width:18px;
+  height:20px;
+}
+#u61_line {
+  position:absolute;
+  left:0px;
+  top:5px;
+  width:312px;
+  height:1px;
+}
+#u62 {
+  position:absolute;
+  left:81px;
+  top:575px;
+  width:251px;
+  height:16px;
+  font-size:14px;
+  color:#666666;
+}
+#u62_img {
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:251px;
+  height:16px;
+}
+#u63 {
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:251px;
+  word-wrap:break-word;
+}
+#u64 {
+  position:absolute;
   left:170px;
   top:181px;
   width:40px;
   height:40px;
 }
-#u57_img {
+#u64_img {
   position:absolute;
   left:0px;
   top:0px;
   width:40px;
   height:40px;
 }
-#u58 {
+#u65 {
   position:absolute;
   left:2px;
   top:12px;
@@ -775,28 +873,28 @@
   visibility:hidden;
   word-wrap:break-word;
 }
-#u59 {
+#u66 {
   position:absolute;
   left:38px;
   top:221px;
   width:311px;
   height:10px;
 }
-#u59_start {
+#u66_start {
   position:absolute;
   left:0px;
   top:-5px;
   width:18px;
   height:20px;
 }
-#u59_end {
+#u66_end {
   position:absolute;
   left:294px;
   top:-5px;
   width:18px;
   height:20px;
 }
-#u59_line {
+#u66_line {
   position:absolute;
   left:0px;
   top:5px;

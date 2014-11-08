@@ -1,6 +1,6 @@
 ﻿$axure.loadCurrentPage({
   "url":"folder_mass_actions.html",
-  "generationDate":new Date(1415446117135.58),
+  "generationDate":new Date(1415447465411.58),
   "isCanvasEnabled":false,
   "variables":["OnLoadVariable"],
   "page":{

@@ -1,6 +1,6 @@
 ﻿$axure.loadCurrentPage({
   "url":"first_launch.html",
-  "generationDate":new Date(1415446116217.33),
+  "generationDate":new Date(1415447464433.36),
   "isCanvasEnabled":false,
   "variables":["OnLoadVariable"],
   "page":{
@@ -295,6 +295,21 @@
                   "height":30}},
               "adaptiveStyles":{
 }}],
+          "interactionMap":{
+            "onClick":{
+              "description":"OnClick",
+              "cases":[{
+                  "description":"Case 1",
+                  "isNewIfGroup":false,
+                  "actions":[{
+                      "action":"linkWindow",
+                      "description":"Open Favorites in Current Window",
+                      "target":{
+                        "targetType":"page",
+                        "url":"favorites.html",
+                        "includeVariables":true},
+                      "linkType":"current"}]}]}},
+          "tabbable":true,
           "images":{
             "normal~":"images/first_launch/u15.png"}},
 {

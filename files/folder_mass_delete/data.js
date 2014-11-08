@@ -1,6 +1,6 @@
 ﻿$axure.loadCurrentPage({
   "url":"folder_mass_delete.html",
-  "generationDate":new Date(1415446117319.06),
+  "generationDate":new Date(1415447465625.71),
   "isCanvasEnabled":false,
   "variables":["OnLoadVariable"],
   "page":{

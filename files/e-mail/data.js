@@ -1,6 +1,6 @@
 ﻿$axure.loadCurrentPage({
   "url":"e-mail.html",
-  "generationDate":new Date(1415446119333.46),
+  "generationDate":new Date(1415447467865.98),
   "isCanvasEnabled":false,
   "variables":["OnLoadVariable"],
   "page":{
@@ -39,60 +39,7 @@
 },
           "adaptiveStyles":{
 },
-          "masterId":"70880914498a4ae18e7e174f0301d35f"},
-{
-          "id":"36d58d467bf74cb09c8f946e152d1c1f",
-          "label":"text - h2",
-          "type":"buttonShape",
-          "styleType":"paragraph",
-          "visible":true,
-          "style":{
-            "fontName":"'HelveticaNeue', 'Helvetica Neue'",
-            "fontSize":"21px",
-            "horizontalAlignment":"center",
-            "foreGroundFill":{
-              "fillType":"solid",
-              "color":0xFF000000,
-              "opacity":1},
-            "location":{
-              "x":70,
-              "y":145},
-            "size":{
-              "width":170,
-              "height":25},
-            "rotation":"0",
-            "textRotation":"0"},
-          "adaptiveStyles":{
-},
-          "objects":[{
-              "id":"d89451d822544bf1b2c142a86b91dd34",
-              "label":"",
-              "isContained":true,
-              "type":"richTextPanel",
-              "styleType":"paragraph",
-              "visible":true,
-              "style":{
-                "fontName":"'HelveticaNeue', 'Helvetica Neue'",
-                "fontSize":"21px",
-                "horizontalAlignment":"center",
-                "foreGroundFill":{
-                  "fillType":"solid",
-                  "color":0xFF000000,
-                  "opacity":1},
-                "location":{
-                  "x":70,
-                  "y":145},
-                "size":{
-                  "width":170,
-                  "height":25},
-                "rotation":"0",
-                "textRotation":"0"},
-              "adaptiveStyles":{
-}}],
-          "annotation":{
-            "Description":"Indicate how many messages in a thread"},
-          "images":{
-            "normal~":"resources/images/transparent.gif"}}]}},
+          "masterId":"70880914498a4ae18e7e174f0301d35f"}]}},
   "masters":{
     "70880914498a4ae18e7e174f0301d35f":{
       "packageId":"70880914498a4ae18e7e174f0301d35f",
@@ -881,6 +828,21 @@
                     "height":30}},
                 "adaptiveStyles":{
 }}],
+            "interactionMap":{
+              "onClick":{
+                "description":"OnClick",
+                "cases":[{
+                    "description":"Case 1",
+                    "isNewIfGroup":false,
+                    "actions":[{
+                        "action":"linkWindow",
+                        "description":"Open File in Current Window",
+                        "target":{
+                          "targetType":"page",
+                          "url":"file.html",
+                          "includeVariables":true},
+                        "linkType":"current"}]}]}},
+            "tabbable":true,
             "images":{
               "normal~":"images/e-mail/u33.png"}},
 {
@@ -916,6 +878,21 @@
                     "height":32}},
                 "adaptiveStyles":{
 }}],
+            "interactionMap":{
+              "onClick":{
+                "description":"OnClick",
+                "cases":[{
+                    "description":"Case 1",
+                    "isNewIfGroup":false,
+                    "actions":[{
+                        "action":"linkWindow",
+                        "description":"Open File in Current Window",
+                        "target":{
+                          "targetType":"page",
+                          "url":"file.html",
+                          "includeVariables":true},
+                        "linkType":"current"}]}]}},
+            "tabbable":true,
             "images":{
               "normal~":"resources/images/transparent.gif"}},
 {
@@ -1153,6 +1130,21 @@
                     "color":0xFF000000}},
                 "adaptiveStyles":{
 }}],
+            "interactionMap":{
+              "onClick":{
+                "description":"OnClick",
+                "cases":[{
+                    "description":"Case 1",
+                    "isNewIfGroup":false,
+                    "actions":[{
+                        "action":"linkWindow",
+                        "description":"Open E-mail Misc in Current Window",
+                        "target":{
+                          "targetType":"page",
+                          "url":"e-mail_misc.html",
+                          "includeVariables":true},
+                        "linkType":"current"}]}]}},
+            "tabbable":true,
             "images":{
               "normal~":"images/folder_content/u14.png"}},
 {
@@ -1251,7 +1243,60 @@
                 "adaptiveStyles":{
 }}],
             "images":{
-              "normal~":"images/file_downloading/u38.png"}}]}},
+              "normal~":"images/file_downloading/u38.png"}},
+{
+            "id":"67ba5bb10c9a4d089963e9fb84510008",
+            "label":"text - h2",
+            "type":"buttonShape",
+            "styleType":"paragraph",
+            "visible":true,
+            "style":{
+              "fontName":"'HelveticaNeue', 'Helvetica Neue'",
+              "fontSize":"21px",
+              "horizontalAlignment":"center",
+              "foreGroundFill":{
+                "fillType":"solid",
+                "color":0xFF000000,
+                "opacity":1},
+              "location":{
+                "x":131,
+                "y":145},
+              "size":{
+                "width":80,
+                "height":25},
+              "rotation":"0",
+              "textRotation":"0"},
+            "adaptiveStyles":{
+},
+            "objects":[{
+                "id":"a8ac85e997be4f5d9d87b2b2a2b54a61",
+                "label":"",
+                "isContained":true,
+                "type":"richTextPanel",
+                "styleType":"paragraph",
+                "visible":true,
+                "style":{
+                  "fontName":"'HelveticaNeue', 'Helvetica Neue'",
+                  "fontSize":"21px",
+                  "horizontalAlignment":"center",
+                  "foreGroundFill":{
+                    "fillType":"solid",
+                    "color":0xFF000000,
+                    "opacity":1},
+                  "location":{
+                    "x":131,
+                    "y":145},
+                  "size":{
+                    "width":80,
+                    "height":25},
+                  "rotation":"0",
+                  "textRotation":"0"},
+                "adaptiveStyles":{
+}}],
+            "annotation":{
+              "Description":"Indicate how many messages in a thread"},
+            "images":{
+              "normal~":"resources/images/transparent.gif"}}]}},
     "a3c9ec5525e347978067bf5cebf60c89":{
       "packageId":"a3c9ec5525e347978067bf5cebf60c89",
       "type":"Axure:Master",
@@ -1568,8 +1613,8 @@
       "e1f00e507efd424eba60104decd3de64":{
         "scriptId":"u57"},
       "9e6d7ceea0f14de28f45d46984804734":{
-        "scriptId":"u58"}},
-    "36d58d467bf74cb09c8f946e152d1c1f":{
-      "scriptId":"u59"},
-    "d89451d822544bf1b2c142a86b91dd34":{
-      "scriptId":"u60"}}});
+        "scriptId":"u58"},
+      "67ba5bb10c9a4d089963e9fb84510008":{
+        "scriptId":"u59"},
+      "a8ac85e997be4f5d9d87b2b2a2b54a61":{
+        "scriptId":"u60"}}}});

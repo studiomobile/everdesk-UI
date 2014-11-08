@@ -1,6 +1,6 @@
 ﻿$axure.loadCurrentPage({
   "url":"e-mail_misc.html",
-  "generationDate":new Date(1415446119452.62),
+  "generationDate":new Date(1415447467990.07),
   "isCanvasEnabled":false,
   "variables":["OnLoadVariable"],
   "page":{
@@ -72,7 +72,7 @@
               "adaptiveStyles":{
 }}],
           "images":{
-            "normal~":"images/e-mail_misc/u59.png"}},
+            "normal~":"images/e-mail_misc/u61.png"}},
 {
           "id":"542f2bdf0b154e09846789fe82313cc6",
           "label":"",
@@ -991,6 +991,21 @@
                     "height":30}},
                 "adaptiveStyles":{
 }}],
+            "interactionMap":{
+              "onClick":{
+                "description":"OnClick",
+                "cases":[{
+                    "description":"Case 1",
+                    "isNewIfGroup":false,
+                    "actions":[{
+                        "action":"linkWindow",
+                        "description":"Open File in Current Window",
+                        "target":{
+                          "targetType":"page",
+                          "url":"file.html",
+                          "includeVariables":true},
+                        "linkType":"current"}]}]}},
+            "tabbable":true,
             "images":{
               "normal~":"images/e-mail/u33.png"}},
 {
@@ -1026,6 +1041,21 @@
                     "height":32}},
                 "adaptiveStyles":{
 }}],
+            "interactionMap":{
+              "onClick":{
+                "description":"OnClick",
+                "cases":[{
+                    "description":"Case 1",
+                    "isNewIfGroup":false,
+                    "actions":[{
+                        "action":"linkWindow",
+                        "description":"Open File in Current Window",
+                        "target":{
+                          "targetType":"page",
+                          "url":"file.html",
+                          "includeVariables":true},
+                        "linkType":"current"}]}]}},
+            "tabbable":true,
             "images":{
               "normal~":"resources/images/transparent.gif"}},
 {
@@ -1263,6 +1293,21 @@
                     "color":0xFF000000}},
                 "adaptiveStyles":{
 }}],
+            "interactionMap":{
+              "onClick":{
+                "description":"OnClick",
+                "cases":[{
+                    "description":"Case 1",
+                    "isNewIfGroup":false,
+                    "actions":[{
+                        "action":"linkWindow",
+                        "description":"Open E-mail Misc in Current Window",
+                        "target":{
+                          "targetType":"page",
+                          "url":"e-mail_misc.html",
+                          "includeVariables":true},
+                        "linkType":"current"}]}]}},
+            "tabbable":true,
             "images":{
               "normal~":"images/folder_content/u14.png"}},
 {
@@ -1361,7 +1406,60 @@
                 "adaptiveStyles":{
 }}],
             "images":{
-              "normal~":"images/file_downloading/u38.png"}}]}},
+              "normal~":"images/file_downloading/u38.png"}},
+{
+            "id":"67ba5bb10c9a4d089963e9fb84510008",
+            "label":"text - h2",
+            "type":"buttonShape",
+            "styleType":"paragraph",
+            "visible":true,
+            "style":{
+              "fontName":"'HelveticaNeue', 'Helvetica Neue'",
+              "fontSize":"21px",
+              "horizontalAlignment":"center",
+              "foreGroundFill":{
+                "fillType":"solid",
+                "color":0xFF000000,
+                "opacity":1},
+              "location":{
+                "x":131,
+                "y":145},
+              "size":{
+                "width":80,
+                "height":25},
+              "rotation":"0",
+              "textRotation":"0"},
+            "adaptiveStyles":{
+},
+            "objects":[{
+                "id":"a8ac85e997be4f5d9d87b2b2a2b54a61",
+                "label":"",
+                "isContained":true,
+                "type":"richTextPanel",
+                "styleType":"paragraph",
+                "visible":true,
+                "style":{
+                  "fontName":"'HelveticaNeue', 'Helvetica Neue'",
+                  "fontSize":"21px",
+                  "horizontalAlignment":"center",
+                  "foreGroundFill":{
+                    "fillType":"solid",
+                    "color":0xFF000000,
+                    "opacity":1},
+                  "location":{
+                    "x":131,
+                    "y":145},
+                  "size":{
+                    "width":80,
+                    "height":25},
+                  "rotation":"0",
+                  "textRotation":"0"},
+                "adaptiveStyles":{
+}}],
+            "annotation":{
+              "Description":"Indicate how many messages in a thread"},
+            "images":{
+              "normal~":"resources/images/transparent.gif"}}]}},
     "a3c9ec5525e347978067bf5cebf60c89":{
       "packageId":"a3c9ec5525e347978067bf5cebf60c89",
       "type":"Axure:Master",
@@ -1678,20 +1776,24 @@
       "e1f00e507efd424eba60104decd3de64":{
         "scriptId":"u57"},
       "9e6d7ceea0f14de28f45d46984804734":{
-        "scriptId":"u58"}},
+        "scriptId":"u58"},
+      "67ba5bb10c9a4d089963e9fb84510008":{
+        "scriptId":"u59"},
+      "a8ac85e997be4f5d9d87b2b2a2b54a61":{
+        "scriptId":"u60"}},
     "eff8ce436d1145ea8e34d3ff447b19e5":{
-      "scriptId":"u59"},
-    "3d781125408d4e53b33641e5cd3e84e0":{
-      "scriptId":"u60"},
-    "542f2bdf0b154e09846789fe82313cc6":{
       "scriptId":"u61"},
-    "8853769c3d414c6fba5cae2e1bb1fba6":{
+    "3d781125408d4e53b33641e5cd3e84e0":{
       "scriptId":"u62"},
-    "de5a1ee0a28949c3a729ee0b0256ba8b":{
+    "542f2bdf0b154e09846789fe82313cc6":{
       "scriptId":"u63"},
-    "834debc2c96842068868799337cb4198":{
+    "8853769c3d414c6fba5cae2e1bb1fba6":{
       "scriptId":"u64"},
-    "3e7daef92d2d4f8d872ce2d26768418b":{
+    "de5a1ee0a28949c3a729ee0b0256ba8b":{
       "scriptId":"u65"},
+    "834debc2c96842068868799337cb4198":{
+      "scriptId":"u66"},
+    "3e7daef92d2d4f8d872ce2d26768418b":{
+      "scriptId":"u67"},
     "7f81eacbd107498d99732d26536e3597":{
-      "scriptId":"u66"}}});
+      "scriptId":"u68"}}});

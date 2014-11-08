@@ -1,6 +1,6 @@
 ﻿$axure.loadCurrentPage({
   "url":"e-mail_favorites.html",
-  "generationDate":new Date(1415446119594.34),
+  "generationDate":new Date(1415447468142.98),
   "isCanvasEnabled":false,
   "variables":["OnLoadVariable"],
   "page":{
@@ -80,7 +80,7 @@
               "adaptiveStyles":{
 }}],
           "images":{
-            "normal~":"images/e-mail_favorites/u59.png"}},
+            "normal~":"images/e-mail_favorites/u61.png"}},
 {
           "id":"a77955d94ef3435db48ad65db02fe268",
           "label":"",
@@ -129,7 +129,7 @@
               "adaptiveStyles":{
 }}],
           "images":{
-            "normal~":"images/e-mail_favorites/u61.png"}},
+            "normal~":"images/e-mail_favorites/u63.png"}},
 {
           "id":"26ccd2e3f61c4259a0ad0136a23bb2b1",
           "label":"",
@@ -178,7 +178,7 @@
               "adaptiveStyles":{
 }}],
           "images":{
-            "normal~":"images/e-mail_favorites/u63.png"}},
+            "normal~":"images/e-mail_favorites/u65.png"}},
 {
           "id":"d4ff44bce4d74d3987bf7ab255c7941d",
           "label":"",
@@ -234,7 +234,7 @@
                       "linkType":"current"}]}]}},
           "tabbable":true,
           "images":{
-            "normal~":"images/e-mail_favorites/u65.png"}}]}},
+            "normal~":"images/e-mail_favorites/u67.png"}}]}},
   "masters":{
     "70880914498a4ae18e7e174f0301d35f":{
       "packageId":"70880914498a4ae18e7e174f0301d35f",
@@ -1023,6 +1023,21 @@
                     "height":30}},
                 "adaptiveStyles":{
 }}],
+            "interactionMap":{
+              "onClick":{
+                "description":"OnClick",
+                "cases":[{
+                    "description":"Case 1",
+                    "isNewIfGroup":false,
+                    "actions":[{
+                        "action":"linkWindow",
+                        "description":"Open File in Current Window",
+                        "target":{
+                          "targetType":"page",
+                          "url":"file.html",
+                          "includeVariables":true},
+                        "linkType":"current"}]}]}},
+            "tabbable":true,
             "images":{
               "normal~":"images/e-mail/u33.png"}},
 {
@@ -1058,6 +1073,21 @@
                     "height":32}},
                 "adaptiveStyles":{
 }}],
+            "interactionMap":{
+              "onClick":{
+                "description":"OnClick",
+                "cases":[{
+                    "description":"Case 1",
+                    "isNewIfGroup":false,
+                    "actions":[{
+                        "action":"linkWindow",
+                        "description":"Open File in Current Window",
+                        "target":{
+                          "targetType":"page",
+                          "url":"file.html",
+                          "includeVariables":true},
+                        "linkType":"current"}]}]}},
+            "tabbable":true,
             "images":{
               "normal~":"resources/images/transparent.gif"}},
 {
@@ -1295,6 +1325,21 @@
                     "color":0xFF000000}},
                 "adaptiveStyles":{
 }}],
+            "interactionMap":{
+              "onClick":{
+                "description":"OnClick",
+                "cases":[{
+                    "description":"Case 1",
+                    "isNewIfGroup":false,
+                    "actions":[{
+                        "action":"linkWindow",
+                        "description":"Open E-mail Misc in Current Window",
+                        "target":{
+                          "targetType":"page",
+                          "url":"e-mail_misc.html",
+                          "includeVariables":true},
+                        "linkType":"current"}]}]}},
+            "tabbable":true,
             "images":{
               "normal~":"images/folder_content/u14.png"}},
 {
@@ -1393,7 +1438,60 @@
                 "adaptiveStyles":{
 }}],
             "images":{
-              "normal~":"images/file_downloading/u38.png"}}]}},
+              "normal~":"images/file_downloading/u38.png"}},
+{
+            "id":"67ba5bb10c9a4d089963e9fb84510008",
+            "label":"text - h2",
+            "type":"buttonShape",
+            "styleType":"paragraph",
+            "visible":true,
+            "style":{
+              "fontName":"'HelveticaNeue', 'Helvetica Neue'",
+              "fontSize":"21px",
+              "horizontalAlignment":"center",
+              "foreGroundFill":{
+                "fillType":"solid",
+                "color":0xFF000000,
+                "opacity":1},
+              "location":{
+                "x":131,
+                "y":145},
+              "size":{
+                "width":80,
+                "height":25},
+              "rotation":"0",
+              "textRotation":"0"},
+            "adaptiveStyles":{
+},
+            "objects":[{
+                "id":"a8ac85e997be4f5d9d87b2b2a2b54a61",
+                "label":"",
+                "isContained":true,
+                "type":"richTextPanel",
+                "styleType":"paragraph",
+                "visible":true,
+                "style":{
+                  "fontName":"'HelveticaNeue', 'Helvetica Neue'",
+                  "fontSize":"21px",
+                  "horizontalAlignment":"center",
+                  "foreGroundFill":{
+                    "fillType":"solid",
+                    "color":0xFF000000,
+                    "opacity":1},
+                  "location":{
+                    "x":131,
+                    "y":145},
+                  "size":{
+                    "width":80,
+                    "height":25},
+                  "rotation":"0",
+                  "textRotation":"0"},
+                "adaptiveStyles":{
+}}],
+            "annotation":{
+              "Description":"Indicate how many messages in a thread"},
+            "images":{
+              "normal~":"resources/images/transparent.gif"}}]}},
     "a3c9ec5525e347978067bf5cebf60c89":{
       "packageId":"a3c9ec5525e347978067bf5cebf60c89",
       "type":"Axure:Master",
@@ -1710,20 +1808,24 @@
       "e1f00e507efd424eba60104decd3de64":{
         "scriptId":"u57"},
       "9e6d7ceea0f14de28f45d46984804734":{
-        "scriptId":"u58"}},
+        "scriptId":"u58"},
+      "67ba5bb10c9a4d089963e9fb84510008":{
+        "scriptId":"u59"},
+      "a8ac85e997be4f5d9d87b2b2a2b54a61":{
+        "scriptId":"u60"}},
     "42363a36ba334d149cbd0b32a6397bb8":{
-      "scriptId":"u59"},
-    "20dc92d27c8e4bb89a83c826ea6ca1f5":{
-      "scriptId":"u60"},
-    "a77955d94ef3435db48ad65db02fe268":{
       "scriptId":"u61"},
-    "1b58634557f8442f8dd20060b0fea6f7":{
+    "20dc92d27c8e4bb89a83c826ea6ca1f5":{
       "scriptId":"u62"},
-    "26ccd2e3f61c4259a0ad0136a23bb2b1":{
+    "a77955d94ef3435db48ad65db02fe268":{
       "scriptId":"u63"},
-    "3b02ded7c9d04c3888a57979a4394d35":{
+    "1b58634557f8442f8dd20060b0fea6f7":{
       "scriptId":"u64"},
-    "d4ff44bce4d74d3987bf7ab255c7941d":{
+    "26ccd2e3f61c4259a0ad0136a23bb2b1":{
       "scriptId":"u65"},
+    "3b02ded7c9d04c3888a57979a4394d35":{
+      "scriptId":"u66"},
+    "d4ff44bce4d74d3987bf7ab255c7941d":{
+      "scriptId":"u67"},
     "897ad91a32554f319ec9cb66b6aacb71":{
-      "scriptId":"u66"}}});
+      "scriptId":"u68"}}});

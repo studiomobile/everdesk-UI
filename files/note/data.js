@@ -1,6 +1,6 @@
 ﻿$axure.loadCurrentPage({
   "url":"note.html",
-  "generationDate":new Date(1415446119656.72),
+  "generationDate":new Date(1415447468219.19),
   "isCanvasEnabled":false,
   "variables":["OnLoadVariable"],
   "page":{
@@ -286,7 +286,7 @@
               "adaptiveStyles":{
 }}],
           "images":{
-            "normal~":"images/e-mail_favorites/u59.png"}}]}},
+            "normal~":"images/e-mail_favorites/u61.png"}}]}},
   "masters":{
     "a3c9ec5525e347978067bf5cebf60c89":{
       "packageId":"a3c9ec5525e347978067bf5cebf60c89",

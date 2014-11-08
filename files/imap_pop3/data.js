@@ -1,6 +1,6 @@
 ﻿$axure.loadCurrentPage({
   "url":"imap_pop3.html",
-  "generationDate":new Date(1415446116406.32),
+  "generationDate":new Date(1415447464631.66),
   "isCanvasEnabled":false,
   "variables":["OnLoadVariable"],
   "page":{

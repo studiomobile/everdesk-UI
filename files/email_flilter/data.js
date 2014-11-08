@@ -1,6 +1,6 @@
 ﻿$axure.loadCurrentPage({
   "url":"email_flilter.html",
-  "generationDate":new Date(1415446118415.62),
+  "generationDate":new Date(1415447467158.09),
   "isCanvasEnabled":false,
   "variables":["OnLoadVariable"],
   "page":{
@@ -74,7 +74,7 @@
               "adaptiveStyles":{
 }}],
           "images":{
-            "normal~":"images/folder_search/u87.png"}},
+            "normal~":"images/folder_search/u94.png"}},
 {
           "id":"a8b9a65bab9a47f99d799063a7ec2064",
           "label":"paragraph",
@@ -179,7 +179,7 @@
               "adaptiveStyles":{
 }}],
           "images":{
-            "normal~":"images/folder_search/u91.png"}},
+            "normal~":"images/folder_search/u98.png"}},
 {
           "id":"4a7a7197363d41738c5f99e4bb264618",
           "label":"",
@@ -220,7 +220,7 @@
               "adaptiveStyles":{
 }}],
           "images":{
-            "normal~":"images/folder_search/u93.png"}},
+            "normal~":"images/folder_search/u100.png"}},
 {
           "id":"364c3b0d4bc24ba08b3f7594d82a00e5",
           "label":"",
@@ -261,7 +261,7 @@
               "adaptiveStyles":{
 }}],
           "images":{
-            "normal~":"images/folder_search/u95.png"}},
+            "normal~":"images/folder_search/u102.png"}},
 {
           "id":"49dfff1b12714cd78808484868cfd6a2",
           "label":"",
@@ -335,7 +335,7 @@
               "adaptiveStyles":{
 }}],
           "images":{
-            "normal~":"images/folder_filter/u99.png"}},
+            "normal~":"images/folder_filter/u106.png"}},
 {
           "id":"ef2ddff0f5e64b929c6f3c7b7b900d39",
           "label":"",
@@ -397,7 +397,7 @@
           "images":{
             "start~":"resources/images/transparent.gif",
             "end~":"resources/images/transparent.gif",
-            "line~":"images/folder_filter/u106_line.png"}},
+            "line~":"images/folder_filter/u113_line.png"}},
 {
           "id":"cedb6a3c7f5c4ca18985e4fccae4bd84",
           "label":"",
@@ -697,7 +697,7 @@
               "adaptiveStyles":{
 }}],
           "images":{
-            "normal~":"images/folder_filter/u120.png"}},
+            "normal~":"images/folder_filter/u127.png"}},
 {
           "id":"2f12d78011fa40039483b84b2877966e",
           "label":"",
@@ -1030,7 +1030,7 @@
           "images":{
             "start~":"resources/images/transparent.gif",
             "end~":"resources/images/transparent.gif",
-            "line~":"images/folder_filter/u103_line.png"}},
+            "line~":"images/folder_filter/u110_line.png"}},
 {
           "id":"e113f7c2ef4c4fe1a9689930141c1b10",
           "label":"",

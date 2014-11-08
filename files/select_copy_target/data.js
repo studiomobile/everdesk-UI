@@ -1,6 +1,6 @@
 ﻿$axure.loadCurrentPage({
   "url":"select_copy_target.html",
-  "generationDate":new Date(1415446117753.96),
+  "generationDate":new Date(1415447466182.59),
   "isCanvasEnabled":false,
   "variables":["OnLoadVariable"],
   "page":{

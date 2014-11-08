@@ -1,6 +1,6 @@
 ﻿$axure.loadCurrentPage({
   "url":"select_move_target.html",
-  "generationDate":new Date(1415446117636.9),
+  "generationDate":new Date(1415447466056.02),
   "isCanvasEnabled":false,
   "variables":["OnLoadVariable"],
   "page":{
