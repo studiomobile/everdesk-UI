@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Get Device Token in DidRegisterUserNotificationSettings - Xamarin Forums</title>
+  <link rel="stylesheet" type="text/css" href="/applications/dashboard/design/style.css?v=2.2.16.6" media="all" />
+  <link rel="stylesheet" type="text/css" href="/plugins/GooglePrettify/design/prettify.css?v=1.2" media="all" />
+  <link rel="stylesheet" type="text/css" href="/plugins/Reactions/design/reactions.css?v=1.2.15" media="all" />
+  <link rel="stylesheet" type="text/css" href="/plugins/FileUpload/design/fileupload.css?v=1.8.4" media="all" />
+  <link rel="stylesheet" type="text/css" href="/applications/reputation/design/reputation.css?v=2.2.16.6" media="all" />
+  <link rel="stylesheet" type="text/css" href="/plugins/AdvancedSearch/design/advanced-search.css?v=1.0.4" media="all" />
+  <link rel="stylesheet" type="text/css" href="/plugins/ButtonBar/design/buttonbar.css?v=1.6" media="all" />
+  <link rel="stylesheet" type="text/css" href="/resources/css/vanillicon.css?v=2.2.16.6" media="all" />
+  <link rel="stylesheet" type="text/css" href="/themes/xamarin/design/custom.css?v=1.3" media="all" />
+  <link rel="stylesheet" type="text/css" href="/plugin/customcss/forums.xamarin.com/rev_85_2014-10-24-20-19-04.css?v=2.2.16.6" media="all" />
+  <link rel="stylesheet" type="text/css" href="/plugins/Online/design/online.css?v=1.7" media="all" />
+  <link rel="stylesheet" type="text/css" href="/plugins/Sprites/design/sprites.css?v=1.0" media="all" />
+  <link rel="shortcut icon" href="http://cdn.vanillaforums.com/xamarin.vanillaforums.com/favicon_4b0981c12f372d91.ico" type="image/x-icon" />
+  <link rel="canonical" href="http://forums.xamarin.com/discussion/24233/get-device-token-in-didregisterusernotificationsettings" />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Xamarin Forums" />
+  <meta property="og:title" itemprop="name" content="Get Device Token in DidRegisterUserNotificationSettings" />
+  <meta property="og:url" content="http://forums.xamarin.com/discussion/24233/get-device-token-in-didregisterusernotificationsettings" />
+  <meta name="description" property="og:description" itemprop="description" content="I've updated my iOS app for iOS8 but having trouble getting the Device Token.
+" />
+  <script type="text/javascript">gdn=window.gdn||{};gdn.meta={"ImageResized":"This image has been resized to fit in the page. Click to enlarge.","ConfirmDeleteCommentHeading":"Delete Comment","ConfirmDeleteCommentText":"Are you sure you want to delete this comment?","DiscussionID":"24233","apcavailable":false,"uploaderuniq":"545e86f4704d1","maxuploadsize":52428800,"AnalyticsTask":"tick","TickExtra":"{\"CategoryID\":2,\"DiscussionID\":24233}","TagHint":"Start to type...","TagSearching":"Searching...","ButtonBarLinkUrl":"Enter your URL:","ButtonBarImageUrl":"Enter image URL:","ButtonBarBBCodeHelpText":"You can use <b><a href=\"http:\/\/en.wikipedia.org\/wiki\/BBCode\" target=\"_new\">BBCode<\/a><\/b> in your post.","ButtonBarHtmlHelpText":"You can use <b><a href=\"http:\/\/htmlguide.drgrog.com\/cheatsheet.php\" target=\"_new\">Simple Html<\/a><\/b> in your post.","ButtonBarMarkdownHelpText":"You can use <b><a href=\"http:\/\/en.wikipedia.org\/wiki\/Markdown\" target=\"_new\">Markdown<\/a><\/b> in your post.","InputFormat":"Markdown","ShowUserReactions":"popup","LastCommentID":83649,"Vanilla_Comments_AutoRefresh":0,"TransportError":"A fatal error occurred while processing the request.<br \/>The server returned the following response: %s","TransientKey":null,"WebRoot":"http:\/\/forums.xamarin.com\/","UrlFormat":"\/{Path}","Path":"discussion\/24233\/get-device-token-in-didregisterusernotificationsettings","Args":"","ResolvedPath":"vanilla\/discussion\/index","ResolvedArgs":"{\"DiscussionID\":\"24233\",\"DiscussionStub\":\"get-device-token-in-didregisterusernotificationsettings\",\"Page\":\"\"}","SignedIn":0,"ConfirmHeading":"Confirm","ConfirmText":"Are you sure you want to do that?","Okay":"Okay","Cancel":"Cancel","Search":"Search"};</script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript"></script>
+  <script src="/js/library/jquery-ui.js?v=2.2.16.6" type="text/javascript"></script>
+  <script src="/js/library/jquery.livequery.js?v=2.2.16.6" type="text/javascript"></script>
+  <script src="/js/library/jquery.form.js?v=2.2.16.6" type="text/javascript"></script>
+  <script src="/js/library/jquery.popup.js?v=2.2.16.6" type="text/javascript"></script>
+  <script src="/js/library/jquery.gardenhandleajaxform.js?v=2.2.16.6" type="text/javascript"></script>
+  <script src="/js/library/jquery.atwho.js?v=2.2.16.6" type="text/javascript"></script>
+  <script src="/js/global.js?v=2.2.16.6" type="text/javascript"></script>
+  <script src="/js/library/jquery.autosize.min.js?v=2.2.16.6" type="text/javascript"></script>
+  <script src="/applications/vanilla/js/discussion.js?v=2.2.16.6" type="text/javascript"></script>
+  <script src="/applications/vanilla/js/autosave.js?v=2.2.16.6" type="text/javascript"></script>
+  <script src="/plugins/FileUpload/js/fileupload.js?v=1.8.4" type="text/javascript"></script>
+  <script src="/plugins/GooglePrettify/js/prettify.js?v=1.2" type="text/javascript"></script>
+  <script src="/plugins/GooglePrettify/js/jquery.textarea.js?v=1.2" type="text/javascript"></script>
+  <script src="/plugins/Reactions/js/reactions.js?v=1.2.15" type="text/javascript"></script>
+  <script src="/js/library/jquery.tokeninput.js?v=2.2.16.6" type="text/javascript"></script>
+  <script src="/plugins/AdvancedSearch/js/advanced-search.js?v=1.0.4" type="text/javascript"></script>
+  <script src="/plugins/ButtonBar/js/buttonbar.js?v=1.6" type="text/javascript"></script>
+  <script src="/plugins/ButtonBar/js/jquery.hotkeys.js?v=1.6" type="text/javascript"></script>
+  <script type="text/javascript">jQuery(document).ready(function($) {
+         var pp = false;
+
+         $('.Message').livequery(function () { 
+            $('pre', this).addClass('prettyprint');
+            if (pp)
+               prettyPrint();
+            $('pre', this).removeClass('prettyprint')
+         });
+         
+         prettyPrint();
+         pp = true;
+      });</script>
+  <script type="text/javascript">jQuery(document).ready(function () {
+     $("textarea").livequery(function () {$("textarea").tabby();})
+});</script>
+
+    <link rel="stylesheet" type="text/css" href="//xamarin.com/content/css/screen.css?v=11" />
+    <link rel="stylesheet" type="text/css" href="//xamarin.com/content/css/legacy/modal.css?v=11" />
+    <link rel="stylesheet" type="text/css" href="//xamarin.com/content/css/legacy/forum.css?v=3" />
+
+
+<script type="text/javascript">
+	$.autogrow = null;
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-23759232-12']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+</head>
+<body id="vanilla_discussion_index" class="Vanilla Discussion Index  Question Section-Discussion Section-Category-ios">
+<noscript>
+    <iframe src="//www.googletagmanager.com/ns.html?id=GTM-57C4Z7" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
+
+<script>
+(function (w, d, s, l, i) {
+w[l] = w[l] || []; w[l].push({
+'gtm.start':
+            new Date().getTime(), event: 'gtm.js'
+}); var f = d.getElementsByTagName(s)[0],
+j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+'//www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+})(window, document, 'script', 'dataLayer', 'GTM-57C4Z7');</script>
+
+<div id="top-container">
+    <div id="global-header">
+        <div class="global-bar">
+            <div class="wrapper">
+                <h1 class="xamarin logo">
+                    <a href="https://xamarin.com/">Xamarin</a>
+                </h1>
+                <div class="navigation">
+                    <a class="label">
+                        <span class="menu">Menu</span>
+                        <span class="close icon"></span>
+                    </a>
+                    <ul>
+                        <li class="dropdown "><a data-toggle="dropdown" href="https://xamarin.com/products">Products</a>
+                            <script type="text/javascript">
+                                var preloadProductsIcons = new Image(); preloadProductsIcons.src = "//xamarin.com/content/images/structure/header/products-icons.svg";
+                            </script>
+                            <ul class="products-list" role="menu">
+                                <li>
+                                    <ul>
+                                        <li class="platfrom"><a href="https://xamarin.com/platform">
+                                            Xamarin Platform
+                                            <small>C# on iOS, Android, Mac &amp; Windows</small>
+                                        </a></li>
+                                        <li class="test-cloud"><a href="https://xamarin.com/test-cloud">
+                                            Xamarin Test Cloud
+                                            <small>Test any app on hundreds of devices</small>
+                                        </a></li>
+                                        <li class="university"><a href="https://xamarin.com/university">
+                                            Xamarin University
+                                            <small>Unlimited, live mobile development training</small>
+                                        </a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <ul>
+                                        <li class="all"><a href="https://xamarin.com/products">All Products</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class=""><a href="https://xamarin.com/customers">Customers</a></li>
+                        <li class=""><a href="https://store.xamarin.com/">Pricing</a></li>
+                        <li class="active"><a href="http://developer.xamarin.com">Developers</a></li>
+                        <li class="dropdown "><a href="https://xamarin.com/support">Support</a>
+                            <ul role="menu">
+                                <li><a href="https://xamarin.com/support">Developer Support</a></li>
+                                <li><a href="https://xamarin.com/partners">Consulting Partners</a></li>
+                                <li><a href="https://xamarin.com/partners/services">Consulting Services</a></li>
+                            </ul>
+                        </li>
+                        <li class="hide-on-mobile dropdown "><a data-toggle="dropdown" href="https://xamarin.com/resources">Resources</a>
+                            <ul role="menu">
+                                <li><a href="http://blog.xamarin.com">Blog</a></li>
+                                <li><a href="https://xamarin.com/faq">FAQ</a></li>
+                                <li><a href="https://xamarin.com/partners">Partners</a></li>
+                                <li><a href="https://xamarin.com/resources/webinars">Webinars</a></li>
+                                <li><a href="https://xamarin.com/enterprise">Xamarin in the Enterprise</a></li>
+                                <li><a href="https://xamarin.com/about">About Xamarin</a></li>
+                            </ul>
+                        </li>
+                        <li class="show-on-mobile"><a href="http://blog.xamarin.com">Blog</a></li>
+                        <li class="show-on-mobile"><a href="https://xamarin.com/about">About Xamarin</a></li>
+
+                        <!--<li class="user" data-hover="dropdown"><a href="https://xamarin.com/account/login">Sign In</a></li>-->
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="local-bar">
+        <div class="wrapper">
+            <div class="navigation">
+                <aside>
+            		<div id="Head">
+                        <div class="ForumSearch"><form method="get" action="/search">
+<div>
+<input type="text" id="Form_Search" name="Search" value="" placeholder="Search forums..." class="InputBox" /><input type="submit" id="Form_Go" value="Go" class="Button" />
+</div>
+</form></div>
+        				<ul class="ForumMenu">
+        					<!--<li><a href="/activity" class="">Activity</a></li>-->
+        					<li><a href="/discussions" class="">Threads</a></li>
+        					<li><a href="/bestof/everything" class="BestOf">Best Of...</a></li>
+
+        				</ul>
+        				<div class="MeBox MeBox-SignIn Inline FlyoutRight"><div class="SignInLinks"><a href="/entry/signin?Target=discussion%2F24233%2Fget-device-token-in-didregisterusernotificationsettings" rel="nofollow">Sign In</a> <span class="Bullet">&middot;</span> <a href="/entry/register?Target=discussion%2F24233%2Fget-device-token-in-didregisterusernotificationsettings" class="ApplyButton" rel="nofollow">Register</a> </div> <div class="SignInIcons"></div></div>
+            		</div>
+                </aside>
+                <ul>
+                    <li><a href="//developer.xamarin.com/">Welcome</a></li>
+                    <li><a href="//developer.xamarin.com/guides">Guides</a></li>
+                    <li><a href="//developer.xamarin.com/recipes">Recipes</a></li>
+                    <li><a href="http://iosapi.xamarin.com" data-toggle="">APIs</a></li>
+                    <li><a href="//developer.xamarin.com/samples-all">Samples</a></li>
+                    <li class="active"><a href="http://forums.xamarin.com">Forums</a></li>
+                    <li><a href="//developer.xamarin.com/videos">Videos</a></li>
+                </ul>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div id="Frame">
+   <div id="Body">
+      <div class="Row">
+         <span class="Breadcrumbs" itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><span class="CrumbLabel CrumbLabel HomeCrumb"><a href="http://forums.xamarin.com/" itemprop="url"><span itemprop="title">Forum</span></a></span> <span itemprop="child" itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><span class="Crumb">›</span> <span class="CrumbLabel Category-ios Last"><a href="//forums.xamarin.com/categories/ios" itemprop="url"><span itemprop="title">iOS</span></a></span> </span></span>
+         <div class="Column PanelColumn" id="Panel">
+                        <div class="BoxFilter BoxDiscussionFilter">
+   <ul class="FilterMenu">
+      <li class="AllCategories"><a href="/categories"><span class="Sprite SpAllCategories"></span> Categories</a></li>       <li class="Discussions"><a href="/discussions" class=""><span class="Sprite SpDiscussions"></span> Recent Threads</a></li>
+      <li class="Activities"><a href="/activity" class=""><span class="Sprite SpActivity"></span> Activity</a></li>      <li class="QnA-UnansweredQuestions "><a href="/discussions/unanswered" class="UnansweredQuestions"><span class="Sprite SpUnansweredQuestions"></span> Unanswered <span class="Aside"><span class="Count">1520</span></span></a></li><li class="Reactions-BestOf"><a href="/bestof/everything"><span class="Sprite SpBestOf"></span> Best Of...</a></li>   </ul>
+</div>
+                     </div>
+         <div class="Column ContentColumn" id="Content">
+            <div class="MessageList Discussion"><!-- Page Title -->
+<div id="Item_0" class="PageTitle"><div class="Options"></div><h1>Get Device Token in DidRegisterUserNotificationSettings</h1></div>
+
+<div id="Discussion_24233" class="Item ItemDiscussion  Role_Member  Offline">
+   <div class="Discussion">
+      <div class="Item-Header DiscussionHeader">
+         <div class="AuthorWrap">
+            <span class="Author">
+               <a href="/profile/11974/Fiona" class="Username">Fiona</a><a title="Fiona" href="/profile/11974/Fiona" class="PhotoWrap  Offline"><img src="http://cdn.vanillaforums.com/xamarin.vanillaforums.com/userpics/994/nOPYWUJMKCR8X.png" alt="Fiona" class="ProfilePhoto ProfilePhotoMedium" /></a>            </span>
+            <span class="AuthorInfo">
+               <span class="MItem AuthorTitle">Fiona Carton</span><span class="MItem AuthorLocation">US</span><span class="MItem RoleTitle">Member</span>  <span class="Rank MItem" title="Level 1">✭</span>            </span>
+         </div>
+         <div class="Meta DiscussionMeta">
+            <span class="MItem DateCreated">
+               <a href="http://forums.xamarin.com/discussion/24233/get-device-token-in-didregisterusernotificationsettings" class="Permalink" rel="nofollow"><time title="September 16, 2014  4:27PM" datetime="2014-09-16T16:27:56+00:00">September 16</time></a>            </span>
+                         <span class="MItem Category"> in <a href="http://forums.xamarin.com/categories/ios">iOS</a></span>          </div>
+      </div>
+            <div class="Item-BodyWrap">
+         <div class="Item-Body">
+            <div class="Message">   
+               <p>I've updated my iOS app for iOS8 but having trouble getting the Device Token.</p>
+
+<p>I've changed my register method to 
+UIApplication.SharedApplication.RegisterUserNotificationSettings (settings);</p>
+
+<p>This is returning to DidRegisterUserNotificationSettings(UIApplication application, UIUserNotificationSettings notificationSettings) instead of
+RegisteredForRemoteNotifications(UIApplication application, NSData deviceToken).</p>
+
+<p>I'm wondering how do I get the Device Token from the DidRegisterUserNotificationSettings method?</p>
+
+<p>Or is there another approach I can take to handling remote notifications in iOS8?</p>
+            </div>
+            <div class="Reactions"> <span class="FlagMenu ToggleFlyout"><a class="Hijack ReactButton ReactButton-Flag FlyoutButton" href="#" title="Flag"  rel="nofollow"><span class="ReactSprite ReactFlag"></span> <span class="ReactLabel">Flag</span></a><ul class="Flyout MenuItems Flags" style="display: none;"><li><a class="Hijack ReactButton ReactButton-Abuse" href="/react/discussion/abuse?id=24233" title="Abuse" data-reaction="abuse" rel="nofollow"><span class="ReactSprite ReactAbuse"></span> <span class="ReactLabel">Abuse</span></a></li></ul></span> <span class="Column-Score Hidden">0</span><!-- Reactions --> <span class="Bullet">&middot;</span> <span class="ReactMenu"><span class="ReactButtons">   <a class="Hijack ReactButton ReactButton-Like" href="/react/discussion/like?id=24233" title="Like" data-reaction="like" rel="nofollow"><span class="ReactSprite ReactLike"></span> <span class="ReactLabel">Like</span></a> </span></span></div>         </div>
+      </div>
+   </div>
+</div>
+</div><div class="CommentsWrap"><span class="BeforeCommentHeading"></span><div class="DataBox DataBox-Comments"><h2 class="CommentHeading">Answers</h2><ul class="MessageList DataList Comments">
+	<li class="Item Alt ItemComment  Offline Role_Member" id="Comment_77499">
+   <div class="Comment">
+
+            <div class="Options">
+               </div>
+            <div class="Item-Header CommentHeader">
+         <div class="AuthorWrap">
+            <span class="Author">
+               <a href="/profile/75538/jefnazario" class="Username">jefnazario</a><a title="jefnazario" href="/profile/75538/jefnazario" class="PhotoWrap  Offline"><img src="http://www.gravatar.com/avatar.php?gravatar_id=e4cfba1d2691573533bc4891a27e942e&amp;size=130&default=http%3A%2F%2Fvanillicon.com%2Fe4cfba1d2691573533bc4891a27e942e.png" alt="jefnazario" class="ProfilePhoto ProfilePhotoMedium" /></a>            </span>
+            <span class="AuthorInfo">
+                <span class="MItem AuthorTitle">Jeferson Fracalossi Nazario</span> <span class="MItem AuthorLocation">US</span><span class="MItem RoleTitle">Member</span>  <span class="Rank MItem" title="Level 1">✭</span>            </span>
+         </div>
+         <div class="Meta CommentMeta CommentInfo">
+            <span class="MItem DateCreated">
+               <a href="/discussion/comment/77499/#Comment_77499" class="Permalink" name="Item_1" rel="nofollow"><time title="September 21, 2014  4:46AM" datetime="2014-09-21T04:46:20+00:00">September 21</time></a>            </span>
+                                 </div>
+      </div>
+      <div class="Item-BodyWrap">
+         <div class="Item-Body">
+            <div class="Message">
+               <p>Hi <a href="/profile/Fiona">@Fiona</a>‌ you just need to call DidRegisterForRemoteNotifications(), like the code snippet below</p>
+
+<blockquote class="Quote">
+  <p>public override void DidRegisterUserNotificationSettings (UIApplication application, UIUserNotificationSettings notificationSettings)
+  {
+    application.RegisterForRemoteNotifications ();
+  }</p>
+</blockquote>
+            </div>
+            <div class="Reactions"> <span class="FlagMenu ToggleFlyout"><a class="Hijack ReactButton ReactButton-Flag FlyoutButton" href="#" title="Flag"  rel="nofollow"><span class="ReactSprite ReactFlag"></span> <span class="ReactLabel">Flag</span></a><ul class="Flyout MenuItems Flags" style="display: none;"><li><a class="Hijack ReactButton ReactButton-Abuse" href="/react/comment/abuse?id=77499" title="Abuse" data-reaction="abuse" rel="nofollow"><span class="ReactSprite ReactAbuse"></span> <span class="ReactLabel">Abuse</span></a></li></ul></span> <span class="Column-Score Hidden">0</span><!-- Reactions --> <span class="Bullet">&middot;</span> <span class="ReactMenu"><span class="ReactButtons">   <a class="Hijack ReactButton ReactButton-Like" href="/react/comment/like?id=77499" title="Like" data-reaction="like" rel="nofollow"><span class="ReactSprite ReactLike"></span> <span class="ReactLabel">Like</span></a> </span></span></div>         </div>
+      </div>
+   </div>
+</li>
+<li class="Item ItemComment  Offline Role_Member Role_University" id="Comment_78475">
+   <div class="Comment">
+
+            <div class="Options">
+               </div>
+            <div class="Item-Header CommentHeader">
+         <div class="AuthorWrap">
+            <span class="Author">
+               <a href="/profile/8362/GeorgePrins" class="Username">GeorgePrins</a><a title="GeorgePrins" href="/profile/8362/GeorgePrins" class="PhotoWrap  Offline"><img src="http://www.gravatar.com/avatar.php?gravatar_id=cc1c2cb81df579896b270905619dd847&amp;size=130&default=http%3A%2F%2Fvanillicon.com%2Fcc1c2cb81df579896b270905619dd847.png" alt="GeorgePrins" class="ProfilePhoto ProfilePhotoMedium" /></a>            </span>
+            <span class="AuthorInfo">
+                <span class="MItem AuthorTitle">George Prins</span> <span class="MItem AuthorLocation">ZA</span><span class="MItem RoleTitle">Member, University</span>  <span class="Rank MItem" title="Level 1">✭</span>            </span>
+         </div>
+         <div class="Meta CommentMeta CommentInfo">
+            <span class="MItem DateCreated">
+               <a href="/discussion/comment/78475/#Comment_78475" class="Permalink" name="Item_2" rel="nofollow"><time title="September 25, 2014  5:30AM" datetime="2014-09-25T05:30:31+00:00">September 25</time></a>            </span>
+                                 </div>
+      </div>
+      <div class="Item-BodyWrap">
+         <div class="Item-Body">
+            <div class="Message">
+               <p>Hi Jeferson
+I assume I would still retrieve the token from the RegisteredForRemoteNotifications() method then? Like in iOS7...although having tried that...it still didn't fire (the RegisteredForRemoteNotifications()).</p>
+            </div>
+            <div class="Reactions"> <span class="FlagMenu ToggleFlyout"><a class="Hijack ReactButton ReactButton-Flag FlyoutButton" href="#" title="Flag"  rel="nofollow"><span class="ReactSprite ReactFlag"></span> <span class="ReactLabel">Flag</span></a><ul class="Flyout MenuItems Flags" style="display: none;"><li><a class="Hijack ReactButton ReactButton-Abuse" href="/react/comment/abuse?id=78475" title="Abuse" data-reaction="abuse" rel="nofollow"><span class="ReactSprite ReactAbuse"></span> <span class="ReactLabel">Abuse</span></a></li></ul></span> <span class="Column-Score Hidden">0</span><!-- Reactions --> <span class="Bullet">&middot;</span> <span class="ReactMenu"><span class="ReactButtons">   <a class="Hijack ReactButton ReactButton-Like" href="/react/comment/like?id=78475" title="Like" data-reaction="like" rel="nofollow"><span class="ReactSprite ReactLike"></span> <span class="ReactLabel">Like</span></a> </span></span></div>         </div>
+      </div>
+   </div>
+</li>
+<li class="Item Alt ItemComment  Offline Role_Member" id="Comment_78543">
+   <div class="Comment">
+
+            <div class="Options">
+               </div>
+            <div class="Item-Header CommentHeader">
+         <div class="AuthorWrap">
+            <span class="Author">
+               <a href="/profile/75538/jefnazario" class="Username">jefnazario</a><a title="jefnazario" href="/profile/75538/jefnazario" class="PhotoWrap  Offline"><img src="http://www.gravatar.com/avatar.php?gravatar_id=e4cfba1d2691573533bc4891a27e942e&amp;size=130&default=http%3A%2F%2Fvanillicon.com%2Fe4cfba1d2691573533bc4891a27e942e.png" alt="jefnazario" class="ProfilePhoto ProfilePhotoMedium" /></a>            </span>
+            <span class="AuthorInfo">
+                <span class="MItem AuthorTitle">Jeferson Fracalossi Nazario</span> <span class="MItem AuthorLocation">US</span><span class="MItem RoleTitle">Member</span>  <span class="Rank MItem" title="Level 1">✭</span>            </span>
+         </div>
+         <div class="Meta CommentMeta CommentInfo">
+            <span class="MItem DateCreated">
+               <a href="/discussion/comment/78543/#Comment_78543" class="Permalink" name="Item_3" rel="nofollow"><time title="September 25, 2014 12:44PM" datetime="2014-09-25T12:44:20+00:00">September 25</time></a>            </span>
+                                 </div>
+      </div>
+      <div class="Item-BodyWrap">
+         <div class="Item-Body">
+            <div class="Message">
+               <p>Yes <a href="/profile/GeorgePrins">@GeorgePrins</a>‌, we still retrieve the token from the RegisteredForRemoteNotifications() method. My application works fine like that:</p>
+
+<blockquote class="Quote">
+  <p>public override void RegisteredForRemoteNotifications (UIApplication application, NSData deviceToken) <br />
+  { <br />
+      App.DeviceToken = deviceToken.ToString(); // Do something to storage deviceToken. <br />
+  }</p>
+  
+  <p>public override void DidRegisterUserNotificationSettings (UIApplication application, UIUserNotificationSettings notificationSettings)<br />
+  {<br />
+    application.RegisterForRemoteNotifications ();<br />
+  }</p>
+</blockquote>
+            </div>
+            <div class="Reactions"> <span class="FlagMenu ToggleFlyout"><a class="Hijack ReactButton ReactButton-Flag FlyoutButton" href="#" title="Flag"  rel="nofollow"><span class="ReactSprite ReactFlag"></span> <span class="ReactLabel">Flag</span></a><ul class="Flyout MenuItems Flags" style="display: none;"><li><a class="Hijack ReactButton ReactButton-Abuse" href="/react/comment/abuse?id=78543" title="Abuse" data-reaction="abuse" rel="nofollow"><span class="ReactSprite ReactAbuse"></span> <span class="ReactLabel">Abuse</span></a></li></ul></span> <span class="Column-Score Hidden">0</span><!-- Reactions --> <span class="Bullet">&middot;</span> <span class="ReactMenu"><span class="ReactButtons">   <a class="Hijack ReactButton ReactButton-Like" href="/react/comment/like?id=78543" title="Like" data-reaction="like" rel="nofollow"><span class="ReactSprite ReactLike"></span> <span class="ReactLabel">Like</span></a> </span></span></div>         </div>
+      </div>
+   </div>
+</li>
+<li class="Item ItemComment  Offline Role_Member" id="Comment_79563">
+   <div class="Comment">
+
+            <div class="Options">
+               </div>
+            <div class="Item-Header CommentHeader">
+         <div class="AuthorWrap">
+            <span class="Author">
+               <a href="/profile/77587/srikanthn" class="Username">srikanthn</a><a title="srikanthn" href="/profile/77587/srikanthn" class="PhotoWrap  Offline"><img src="http://www.gravatar.com/avatar.php?gravatar_id=be477bcb9514dda5bb466cfadc7453f6&amp;size=130&default=http%3A%2F%2Fvanillicon.com%2Fbe477bcb9514dda5bb466cfadc7453f6.png" alt="srikanthn" class="ProfilePhoto ProfilePhotoMedium" /></a>            </span>
+            <span class="AuthorInfo">
+                <span class="MItem AuthorTitle">srikanth n</span> <span class="MItem AuthorLocation">US</span><span class="MItem RoleTitle">Member</span>  <span class="Rank MItem" title="Level 1">✭</span>            </span>
+         </div>
+         <div class="Meta CommentMeta CommentInfo">
+            <span class="MItem DateCreated">
+               <a href="/discussion/comment/79563/#Comment_79563" class="Permalink" name="Item_4" rel="nofollow"><time title="October  1, 2014  1:14PM" datetime="2014-10-01T13:14:26+00:00">October 1</time></a>            </span>
+            <span class="MItem"> <span title="Edited October  1, 2014  1:27PM by srikanthn." class="DateUpdated">edited October 1</span> </span>                     </div>
+      </div>
+      <div class="Item-BodyWrap">
+         <div class="Item-Body">
+            <div class="Message">
+               <p>I am having same issue too.. RegisteredForRemoteNotifications  Method is not getting called in ios8. I have called it as below:</p>
+
+<p>public override bool FinishedLaunching (UIApplication app, NSDictionary options)
+{
+            var version8 = new Version (8,0);
+            if (new Version(UIDevice.CurrentDevice.SystemVersion) &lt; version8) 
+            {</p>
+
+<pre><code>            var notificationTypes = UIRemoteNotificationType.Alert | UIRemoteNotificationType.Badge |           UIRemoteNotificationType.Sound;
+
+UIApplication.SharedApplication.RegisterForRemoteNotificationTypes (notificationTypes);
+        }
+        else
+        {
+
+            var settings = UIUserNotificationSettings.GetSettingsForTypes(UIUserNotificationType.Alert | UIUserNotificationType.Badge | UIUserNotificationType.Sound, new NSSet());
+
+            UIApplication.SharedApplication.RegisterUserNotificationSettings(settings);
+
+        }
+</code></pre>
+
+<p>}
+public override void DidRegisterUserNotificationSettings (UIApplication application, UIUserNotificationSettings notificationSettings)
+{<br />
+    application.RegisterForRemoteNotifications ();
+ }</p>
+
+<p>Even not getting error <a href="/profile/FailedToRegisterForRemoteNotifications">@FailedToRegisterForRemoteNotifications</a>. the same code is working fine with iOS 7</p>
+            </div>
+            <div class="Reactions"> <span class="FlagMenu ToggleFlyout"><a class="Hijack ReactButton ReactButton-Flag FlyoutButton" href="#" title="Flag"  rel="nofollow"><span class="ReactSprite ReactFlag"></span> <span class="ReactLabel">Flag</span></a><ul class="Flyout MenuItems Flags" style="display: none;"><li><a class="Hijack ReactButton ReactButton-Abuse" href="/react/comment/abuse?id=79563" title="Abuse" data-reaction="abuse" rel="nofollow"><span class="ReactSprite ReactAbuse"></span> <span class="ReactLabel">Abuse</span></a></li></ul></span> <span class="Column-Score Hidden">0</span><!-- Reactions --> <span class="Bullet">&middot;</span> <span class="ReactMenu"><span class="ReactButtons">   <a class="Hijack ReactButton ReactButton-Like" href="/react/comment/like?id=79563" title="Like" data-reaction="like" rel="nofollow"><span class="ReactSprite ReactLike"></span> <span class="ReactLabel">Like</span></a> </span></span></div>         </div>
+      </div>
+   </div>
+</li>
+<li class="Item Alt ItemComment  Offline Role_Member" id="Comment_79602">
+   <div class="Comment">
+
+            <div class="Options">
+               </div>
+            <div class="Item-Header CommentHeader">
+         <div class="AuthorWrap">
+            <span class="Author">
+               <a href="/profile/77587/srikanthn" class="Username">srikanthn</a><a title="srikanthn" href="/profile/77587/srikanthn" class="PhotoWrap  Offline"><img src="http://www.gravatar.com/avatar.php?gravatar_id=be477bcb9514dda5bb466cfadc7453f6&amp;size=130&default=http%3A%2F%2Fvanillicon.com%2Fbe477bcb9514dda5bb466cfadc7453f6.png" alt="srikanthn" class="ProfilePhoto ProfilePhotoMedium" /></a>            </span>
+            <span class="AuthorInfo">
+                <span class="MItem AuthorTitle">srikanth n</span> <span class="MItem AuthorLocation">US</span><span class="MItem RoleTitle">Member</span>  <span class="Rank MItem" title="Level 1">✭</span>            </span>
+         </div>
+         <div class="Meta CommentMeta CommentInfo">
+            <span class="MItem DateCreated">
+               <a href="/discussion/comment/79602/#Comment_79602" class="Permalink" name="Item_5" rel="nofollow"><time title="October  1, 2014  3:58PM" datetime="2014-10-01T15:58:00+00:00">October 1</time></a>            </span>
+                                 </div>
+      </div>
+      <div class="Item-BodyWrap">
+         <div class="Item-Body">
+            <div class="Message">
+               <p>I am even getting below alert also</p>
+            </div>
+            <div class="Attachments">
+   <div class="AttachFileContainer">
+                  <div class="Attachment">
+               <div class="FilePreview">
+                  <img src="http://cdn.vanillaforums.com/xamarin.vanillaforums.com/thumbnails/FileUpload/2c/61e296e49decd96a28833545031d9f.png" class="ImageThumbnail" width="234" height="128" /></div>
+               <div class="FileHover">
+                  <img src="http://cdn.vanillaforums.com/xamarin.vanillaforums.com/thumbnails/FileUpload/2c/61e296e49decd96a28833545031d9f.png" class="ImageThumbnail" width="234" height="128" />                  <div class="FileMeta">
+                     <div class="FileName">Untitled.png</div><div class="FileAttributes"> <span class="FileSize">431&#160;x&#160;236</span> -  <span class="FileSize">10K</span></div>                  </div>
+               </div>
+            </div>
+         </div>
+</div><div class="Reactions"> <span class="FlagMenu ToggleFlyout"><a class="Hijack ReactButton ReactButton-Flag FlyoutButton" href="#" title="Flag"  rel="nofollow"><span class="ReactSprite ReactFlag"></span> <span class="ReactLabel">Flag</span></a><ul class="Flyout MenuItems Flags" style="display: none;"><li><a class="Hijack ReactButton ReactButton-Abuse" href="/react/comment/abuse?id=79602" title="Abuse" data-reaction="abuse" rel="nofollow"><span class="ReactSprite ReactAbuse"></span> <span class="ReactLabel">Abuse</span></a></li></ul></span> <span class="Column-Score Hidden">0</span><!-- Reactions --> <span class="Bullet">&middot;</span> <span class="ReactMenu"><span class="ReactButtons">   <a class="Hijack ReactButton ReactButton-Like" href="/react/comment/like?id=79602" title="Like" data-reaction="like" rel="nofollow"><span class="ReactSprite ReactLike"></span> <span class="ReactLabel">Like</span></a> </span></span></div>         </div>
+      </div>
+   </div>
+</li>
+<li class="Item ItemComment  Offline Role_Member" id="Comment_80622">
+   <div class="Comment">
+
+            <div class="Options">
+               </div>
+            <div class="Item-Header CommentHeader">
+         <div class="AuthorWrap">
+            <span class="Author">
+               <a href="/profile/77587/srikanthn" class="Username">srikanthn</a><a title="srikanthn" href="/profile/77587/srikanthn" class="PhotoWrap  Offline"><img src="http://www.gravatar.com/avatar.php?gravatar_id=be477bcb9514dda5bb466cfadc7453f6&amp;size=130&default=http%3A%2F%2Fvanillicon.com%2Fbe477bcb9514dda5bb466cfadc7453f6.png" alt="srikanthn" class="ProfilePhoto ProfilePhotoMedium" /></a>            </span>
+            <span class="AuthorInfo">
+                <span class="MItem AuthorTitle">srikanth n</span> <span class="MItem AuthorLocation">US</span><span class="MItem RoleTitle">Member</span>  <span class="Rank MItem" title="Level 1">✭</span>            </span>
+         </div>
+         <div class="Meta CommentMeta CommentInfo">
+            <span class="MItem DateCreated">
+               <a href="/discussion/comment/80622/#Comment_80622" class="Permalink" name="Item_6" rel="nofollow"><time title="October  8, 2014  6:10AM" datetime="2014-10-08T06:10:11+00:00">October 8</time></a>            </span>
+                                 </div>
+      </div>
+      <div class="Item-BodyWrap">
+         <div class="Item-Body">
+            <div class="Message">
+               <p><a href="/profile/Jeferson">@Jeferson</a>‌,</p>
+
+<p>It is still not working me.. can you just look @ my code above.</p>
+            </div>
+            <div class="Reactions"> <span class="FlagMenu ToggleFlyout"><a class="Hijack ReactButton ReactButton-Flag FlyoutButton" href="#" title="Flag"  rel="nofollow"><span class="ReactSprite ReactFlag"></span> <span class="ReactLabel">Flag</span></a><ul class="Flyout MenuItems Flags" style="display: none;"><li><a class="Hijack ReactButton ReactButton-Abuse" href="/react/comment/abuse?id=80622" title="Abuse" data-reaction="abuse" rel="nofollow"><span class="ReactSprite ReactAbuse"></span> <span class="ReactLabel">Abuse</span></a></li></ul></span> <span class="Column-Score Hidden">0</span><!-- Reactions --> <span class="Bullet">&middot;</span> <span class="ReactMenu"><span class="ReactButtons">   <a class="Hijack ReactButton ReactButton-Like" href="/react/comment/like?id=80622" title="Like" data-reaction="like" rel="nofollow"><span class="ReactSprite ReactLike"></span> <span class="ReactLabel">Like</span></a> </span></span></div>         </div>
+      </div>
+   </div>
+</li>
+<li class="Item Alt ItemComment  Offline Role_Member" id="Comment_83189">
+   <div class="Comment">
+
+            <div class="Options">
+               </div>
+            <div class="Item-Header CommentHeader">
+         <div class="AuthorWrap">
+            <span class="Author">
+               <a href="/profile/29525/JonathanDibble" class="Username">JonathanDibble</a><a title="JonathanDibble" href="/profile/29525/JonathanDibble" class="PhotoWrap  Offline"><img src="http://cdn.vanillaforums.com/xamarin.vanillaforums.com/userpics/278/nMTI323A1RAQI.JPG" alt="JonathanDibble" class="ProfilePhoto ProfilePhotoMedium" /></a>            </span>
+            <span class="AuthorInfo">
+                <span class="MItem AuthorTitle">Jonathan Dibble</span> <span class="MItem AuthorLocation">GB</span><span class="MItem RoleTitle">Member</span>  <span class="Rank MItem" title="Level 1">✭</span>            </span>
+         </div>
+         <div class="Meta CommentMeta CommentInfo">
+            <span class="MItem DateCreated">
+               <a href="/discussion/comment/83189/#Comment_83189" class="Permalink" name="Item_7" rel="nofollow"><time title="October 20, 2014  4:00PM" datetime="2014-10-20T16:00:44+00:00">October 20</time></a>            </span>
+                                 </div>
+      </div>
+      <div class="Item-BodyWrap">
+         <div class="Item-Body">
+            <div class="Message">
+               <p>I am having the same problem.  Has anybody a solution to this issue.</p>
+            </div>
+            <div class="Reactions"> <span class="FlagMenu ToggleFlyout"><a class="Hijack ReactButton ReactButton-Flag FlyoutButton" href="#" title="Flag"  rel="nofollow"><span class="ReactSprite ReactFlag"></span> <span class="ReactLabel">Flag</span></a><ul class="Flyout MenuItems Flags" style="display: none;"><li><a class="Hijack ReactButton ReactButton-Abuse" href="/react/comment/abuse?id=83189" title="Abuse" data-reaction="abuse" rel="nofollow"><span class="ReactSprite ReactAbuse"></span> <span class="ReactLabel">Abuse</span></a></li></ul></span> <span class="Column-Score Hidden">0</span><!-- Reactions --> <span class="Bullet">&middot;</span> <span class="ReactMenu"><span class="ReactButtons">   <a class="Hijack ReactButton ReactButton-Like" href="/react/comment/like?id=83189" title="Like" data-reaction="like" rel="nofollow"><span class="ReactSprite ReactLike"></span> <span class="ReactLabel">Like</span></a> </span></span></div>         </div>
+      </div>
+   </div>
+</li>
+<li class="Item ItemComment  Offline Role_Member" id="Comment_83649">
+   <div class="Comment">
+
+            <div class="Options">
+               </div>
+            <div class="Item-Header CommentHeader">
+         <div class="AuthorWrap">
+            <span class="Author">
+               <a href="/profile/15096/C.Boer" class="Username">C.Boer</a><a title="C.Boer" href="/profile/15096/C.Boer" class="PhotoWrap  Offline"><img src="http://www.gravatar.com/avatar.php?gravatar_id=cfbdc37294ef42a5599e700ee0bc41bd&amp;size=130&default=http%3A%2F%2Fvanillicon.com%2Fcfbdc37294ef42a5599e700ee0bc41bd.png" alt="C.Boer" class="ProfilePhoto ProfilePhotoMedium" /></a>            </span>
+            <span class="AuthorInfo">
+                <span class="MItem AuthorTitle">C. Boer</span> <span class="MItem AuthorLocation">NL</span><span class="MItem RoleTitle">Member</span>  <span class="Rank MItem" title="Level 1">✭</span>            </span>
+         </div>
+         <div class="Meta CommentMeta CommentInfo">
+            <span class="MItem DateCreated">
+               <a href="/discussion/comment/83649/#Comment_83649" class="Permalink" name="Item_8" rel="nofollow"><time title="October 22, 2014  8:58AM" datetime="2014-10-22T08:58:25+00:00">October 22</time></a>            </span>
+                                 </div>
+      </div>
+      <div class="Item-BodyWrap">
+         <div class="Item-Body">
+            <div class="Message">
+               <p>I had the same issue and found the answer. Don't forget to call: <code>UIApplication.SharedApplication.RegisterForRemoteNotifications();</code></p>
+
+<pre><code>public override bool FinishedLaunching(UIApplication app, NSDictionary options)
+{
+    if (UIDevice.CurrentDevice.CheckSystemVersion(8, 0))
+    {
+        UIApplication.SharedApplication.RegisterUserNotificationSettings(
+            UIUserNotificationSettings.GetSettingsForTypes(
+                UIUserNotificationType.Alert | UIUserNotificationType.Badge,
+                null));
+        UIApplication.SharedApplication.RegisterForRemoteNotifications();
+    }
+    else
+    {
+        UIApplication.SharedApplication.RegisterForRemoteNotificationTypes(
+            UIRemoteNotificationType.Alert | UIRemoteNotificationType.Badge);
+    }
+
+    return true;
+}
+</code></pre>
+            </div>
+            <div class="Reactions"> <span class="FlagMenu ToggleFlyout"><a class="Hijack ReactButton ReactButton-Flag FlyoutButton" href="#" title="Flag"  rel="nofollow"><span class="ReactSprite ReactFlag"></span> <span class="ReactLabel">Flag</span></a><ul class="Flyout MenuItems Flags" style="display: none;"><li><a class="Hijack ReactButton ReactButton-Abuse" href="/react/comment/abuse?id=83649" title="Abuse" data-reaction="abuse" rel="nofollow"><span class="ReactSprite ReactAbuse"></span> <span class="ReactLabel">Abuse</span></a></li></ul></span> <span class="Column-Score Hidden">0</span><!-- Reactions --> <span class="Bullet">&middot;</span> <span class="ReactMenu"><span class="ReactButtons">   <a class="Hijack ReactButton ReactButton-Like" href="/react/comment/like?id=83649" title="Like" data-reaction="like" rel="nofollow"><span class="ReactSprite ReactLike"></span> <span class="ReactLabel">Like</span></a> </span></span></div>         </div>
+      </div>
+   </div>
+</li>
+</ul>
+</div><div class="P PagerWrap"></div></div>		<div class="Foot Closed">
+			<div class="Note Closed SignInOrRegister"><a href="/entry/signin?Target=discussion%2F24233%2Fget-device-token-in-didregisterusernotificationsettings%3F">Sign In</a> or <a href="/entry/register?Target=discussion%2F24233%2Fget-device-token-in-didregisterusernotificationsettings%3F">Register</a> to comment.         </div>
+					</div>
+		
+                     </div>
+      </div>
+   </div>
+</div>
+
+<div id="global-footer">
+    <div class="wrapper">
+
+        <a href="https://xamarin.com/" class="hexagon"></a>
+
+        <div class="social-icons show-on-mobile">
+            <a class="facebook" href="#">Facebook</a>
+            <a class="twitter" href="https://twitter.com/xamarinhq">Twitter</a>
+            <a class="github" href="#">GitHub</a>
+        </div>
+
+        <div class="navigation hide-on-mobile">
+            <ul>
+                <li>Products
+                    <ul>
+                        <li><a href="https://xamarin.com/platform">Xamarin Platform</a></li>
+                        <li><a href="https://xamarin.com/test-cloud">Xamarin Test Cloud</a></li>
+                        <li><a href="https://xamarin.com/university">Xamarin University</a></li>
+                        <li><a href="https://xamarin.com/studio">Xamarin Studio</a></li>
+                        <li><a href="https://xamarin.com/visual-studio">Xamarin for Visual Studio</a></li>
+                        <li><a href="https://xamarin.com/forms">Xamarin.Forms</a></li>
+                        <li><a href="http://scan.xamarin.com">.NET Mobility Scanner</a></li>
+                        <li><a href="https://xamarin.com/prebuilt-apps">Pre-built apps</a></li>
+			<li><a href="https://xamarin.com/licensing">Mono Commercial Licensing</a></li>
+                    </ul>
+                </li>
+
+                <li>Company
+                    <ul>
+                        <li><a href="https://xamarin.com/about">About us</a></li>
+                        <li><a href="https://xamarin.com/customers">Customers</a></li>
+                        <li><a href="http://blog.xamarin.com">Blog</a></li>
+                        <li><a href="https://xamarin.com/support">Support</a></li>
+                        <li><a href="https://xamarin.com/resources">Resources</a></li>
+                        <li><a href="https://xamarin.com/partners">Partners</a></li>
+                        <li><a href="https://xamarin.com/jobs">Jobs</a></li>
+                        <li><a href="https://store.xamarin.com">Pricing</a></li>
+                        <li><a href="https://xamarin.com/press">Press</a></li>
+                    </ul>
+                </li>
+
+                <li>Developer center
+                    <ul>
+                        <li><a href="http://developer.xamarin.com">Get started</a></li>
+                        <li><a href="http://developer.xamarin.com/guides">Guides</a></li>
+                        <li><a href="http://developer.xamarin.com/recipes">Recipes</a></li>
+                        <li><a href="http://iosapi.xamarin.com/">Xamarin.iOS APIs</a></li>
+                        <li><a href="http://androidapi.xamarin.com/">Xamarin.Android APIs</a></li>
+                        <li><a href="http://macapi.xamarin.com/">Xamarin.Mac APIs</a></li>
+                        <li><a href="http://forums.xamarin.com">Forums</a></li>
+                        <li><a href="http://planet.xamarin.com">Community blogs</a></li>
+                        <li><a href="https://components.xamarin.com">Components</a></li>
+                        <li><a href="http://developer.xamarin.com/videos/">Videos</a></li>
+                    </ul>
+                </li>
+
+                <li>Elsewhere
+                    <ul>
+			<li><a href="https://twitter.com/xamarinhq">Twitter</a></li>
+                        <li><a href="https://github.com/xamarin">GitHub</a></li>
+                        <li><a href="https://www.facebook.com/xamarinhq">Facebook</a></li>
+                        <li><a href="https://plus.google.com/101300081691995092351/posts">Google+</a></li>
+                        <li><a href="https://www.youtube.com/user/XamarinHQ">YouTube</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+
+    <footer>
+        <div class="wrapper">
+            <div class="contact">
+                <span class="tel">+1 (855) 926-2746</span>
+                <a class="email" href="mailto:hello@xamarin.com">hello@xamarin.com</a>
+            </div>
+            <div class="legal">
+                <a href="#">Privacy policy</a>
+                <span>&copy; 2014 Xamarin Inc.</span>
+            </div>
+        </div>
+    </footer>
+</div>
+
+
+
+
+<script type="text/javascript" src="//xamarin.com/content/js/libraries/fastclick.js"></script>
+<script type="text/javascript" src="//xamarin.com/content/js/libraries/bootstrap.min.js"></script>
+<script type="text/javascript" src="//xamarin.com/content/js/libraries/hisrc.js"></script>
+<script type="text/javascript" src="//xamarin.com/content/js/structure/template.js"></script>
+<!--
+<script type="text/javascript" src="//xamarin.com/js/janky.post.js?v=1"></script>
+<script type="text/javascript" src="//xamarin.com/content/js/legacy/login.js"></script>
+-->
+<script type="text/javascript" src="//xamarin.com/content/js/structure/mobile.js"></script>
+
+
+<script type="text/javascript">
+	if ($.fn.tooltip) {
+		$('[rel="tooltip"]').tooltip();	
+	}
+</script>
+
+<script type="text/javascript">
+        (function() {
+          function initMunchkin() {
+            Munchkin.init('975-JOX-769');
+            
+            // custom handling after marketo is ready
+            if (typeof marketo_ready != 'undefined') marketo_ready();
+            
+          }
+          var s = document.createElement('script');
+          s.type = 'text/javascript';
+          s.async = true;
+          s.src = document.location.protocol + '//munchkin.marketo.net/munchkin.js';
+          s.onreadystatechange = function() {
+            if (this.readyState == 'complete' || this.readyState == 'loaded') {
+              initMunchkin();
+            }
+          };
+          s.onload = initMunchkin;
+          document.getElementsByTagName('body')[0].appendChild(s);
+        })();
+</script>
+
+
+<script type="text/javascript">
+            var _sf_async_config={};
+            /** CONFIGURATION START **/
+            _sf_async_config.uid = 40977;
+            _sf_async_config.domain = "forums.xamarin.com";
+            /** CONFIGURATION END **/
+            (function(){
+              function loadChartbeat() {
+                window._sf_endpt=(new Date()).getTime();
+                var e = document.createElement("script");
+                e.setAttribute("language", "javascript");
+                e.setAttribute("type", "text/javascript");
+                e.setAttribute("src",
+                   (("https:" == document.location.protocol) ?
+                     "https://a248.e.akamai.net/chartbeat.download.akamai.com/102508/" :
+                     "http://static.chartbeat.com/") +
+                   "js/chartbeat.js");
+                document.body.appendChild(e);
+              }
+              var oldonload = window.onload;
+              window.onload = (typeof window.onload != "function") ?
+                 loadChartbeat : function() { oldonload(); loadChartbeat(); };
+            })();
+</script>
+
+
+</body>
+</html>

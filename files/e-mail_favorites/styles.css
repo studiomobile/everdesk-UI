@@ -64,6 +64,8 @@
   width:95px;
   height:16px;
   font-family:'HelveticaNeue', 'Helvetica Neue';
+  font-weight:400;
+  font-style:normal;
   font-size:21px;
   color:#000000;
 }
@@ -317,6 +319,7 @@
   height:18px;
   font-family:'Arial-BoldMT', 'Arial Bold', 'Arial';
   font-weight:700;
+  font-style:normal;
   font-size:16px;
   color:#999999;
 }
@@ -394,6 +397,8 @@
   width:30px;
   height:30px;
   font-family:'FontAwesome', 'FontAwesome';
+  font-weight:400;
+  font-style:normal;
   font-size:24px;
   color:#2087FC;
 }
@@ -418,6 +423,8 @@
   width:30px;
   height:30px;
   font-family:'FontAwesome', 'FontAwesome';
+  font-weight:400;
+  font-style:normal;
   font-size:24px;
   color:#2087FC;
 }
@@ -571,6 +578,8 @@
   width:29px;
   height:29px;
   font-family:'FontAwesome', 'FontAwesome';
+  font-weight:400;
+  font-style:normal;
   font-size:28px;
 }
 #u45_img {
@@ -594,6 +603,8 @@
   width:29px;
   height:29px;
   font-family:'FontAwesome', 'FontAwesome';
+  font-weight:400;
+  font-style:normal;
   font-size:28px;
 }
 #u47_img {
@@ -639,6 +650,8 @@
   width:30px;
   height:30px;
   font-family:'FontAwesome', 'FontAwesome';
+  font-weight:400;
+  font-style:normal;
   font-size:24px;
   color:#2087FC;
 }
@@ -729,6 +742,8 @@
   width:80px;
   height:25px;
   font-family:'HelveticaNeue', 'Helvetica Neue';
+  font-weight:400;
+  font-style:normal;
   font-size:21px;
   color:#000000;
   text-align:center;

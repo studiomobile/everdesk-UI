@@ -64,6 +64,8 @@
   width:95px;
   height:16px;
   font-family:'HelveticaNeue', 'Helvetica Neue';
+  font-weight:400;
+  font-style:normal;
   font-size:21px;
   color:#000000;
 }
@@ -666,6 +668,8 @@
   width:200px;
   height:30px;
   font-family:'HelveticaNeue', 'Helvetica Neue';
+  font-weight:400;
+  font-style:normal;
   font-size:21px;
   color:#000000;
 }
@@ -690,6 +694,8 @@
   width:70px;
   height:30px;
   font-family:'HelveticaNeue', 'Helvetica Neue';
+  font-weight:400;
+  font-style:normal;
   font-size:16px;
 }
 #u50_img {
@@ -713,6 +719,8 @@
   width:70px;
   height:30px;
   font-family:'HelveticaNeue', 'Helvetica Neue';
+  font-weight:400;
+  font-style:normal;
   font-size:16px;
 }
 #u52_img {

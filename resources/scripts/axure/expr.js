@@ -13,6 +13,17 @@ $axure.internal(function($ax) {
     };
 
     var isEqual = function(left, right) {
+        if(left instanceof Date && right instanceof Date) {
+            if(left.getMilliseconds() != right.getMilliseconds()) return false;
+            if(left.getSeconds() != right.getSeconds()) return false;
+            if(left.getMinutes() != right.getMinutes()) return false;
+            if(left.getHours() != right.getHours()) return false;
+            if(left.getDate() != right.getDate()) return false;
+            if(left.getMonth() != right.getMonth()) return false;
+            if(left.getYear() != right.getYear()) return false;
+            return true;
+        }
+
         if(left instanceof Object && right instanceof Object) {
             var prop;
             // Go through all of lefts properties and compare them to rights.
@@ -67,8 +78,8 @@ $axure.internal(function($ax) {
     _exprHandlers.pathLiteral = function(expr, eventInfo) {
         if(expr.isThis) return [eventInfo.srcElement];
         if(expr.isFocused && window.lastFocusedControl) {
-            window.lastFocusedControl.focus();
-            return [window.lastFocusedControl.getAttribute('id')];
+            $ax('#' + window.lastFocusedControl).focus();
+            return [window.lastFocusedControl];
         }
         if(expr.isTarget) return [eventInfo.targetElement];
 
@@ -82,7 +93,7 @@ $axure.internal(function($ax) {
         for(var i = 0; i < elementIds.length; i++) {
             elementIdsWithSuffix[i] = $ax.repeater.applySuffixToElementId(elementIds[i], suffix);
         }
-        return $jobj(elementIdsWithSuffix).data('label');
+        return String($jobj(elementIdsWithSuffix).data('label'));
     };
 
     _exprHandlers.fcall = function(expr, eventInfo) {
@@ -95,11 +106,22 @@ $axure.internal(function($ax) {
             var fcallArg = '';
             if(targets.length) {
                 for(var j = 0; j < targets.length; j++) {
+                    if(exprArg == null) {
+                        fcallArgs[j][i] = null;
+                        continue;
+                    }
                     eventInfo.targetElement = targets[j];
-                    fcallArgs[j][i] = _evaluateExpr(exprArg, eventInfo);
+                    fcallArg = _evaluateExpr(exprArg, eventInfo);
+                    if(typeof (fcallArg) == 'undefined') return '';
+                    fcallArgs[j][i] = fcallArg;
                 }
             } else {
+                if(exprArg == null) {
+                    fcallArgs[i] = null;
+                    continue;
+                }
                 fcallArg = _evaluateExpr(exprArg, eventInfo);
+                if(typeof (fcallArg) == 'undefined') return '';
                 fcallArgs[i] = fcallArg;
             }
 
@@ -229,8 +251,10 @@ $axure.internal(function($ax) {
 
     _exprFunctions.SetFocusedWidgetText = function(elementId, value) {
         if(window.lastFocusedControl) {
-            window.lastFocusedControl.focus();
-            window.lastFocusedControl.value = value;
+            var elementId = window.lastFocusedControl;
+            var type = $obj(elementId).type;
+            if(type == 'textBox' || type == 'textArea') _exprFunctions.SetWidgetFormText([elementId], value);
+            else _exprFunctions.SetWidgetRichText([elementId], value, true);
         }
     };
 
@@ -258,26 +282,26 @@ $axure.internal(function($ax) {
             var element = window.document.getElementById(id);
             $ax.visibility.SetVisible(element, true);
 
-            var spans = $jobj(id).find('span');
-            if(plain) {
-                // Wrap in span and p, style them accordingly.
-                var span = $('<span></span>');
-                if(spans.length > 0) {
-                    span.attr('style', $(spans[0]).attr('style'));
-                    span.attr('id', $(spans[0]).attr('id'));
-                }
-                span.html(value);
-                var p = $('<p></p>');
-                var ps = $jobj(id).find('p');
-                if(ps.length > 0) {
-                    p.attr('style', $(ps[0]).attr('style'));
-                    p.attr('id', $(ps[0]).attr('id'));
-                }
-                p.append(span);
-                value = $('<div></div>').append(p).html();
-            }
-
             $ax.style.transformTextWithVerticalAlignment(id, function() {
+                var spans = $jobj(id).find('span');
+                if(plain) {
+                    // Wrap in span and p, style them accordingly.
+                    var span = $('<span></span>');
+                    if(spans.length > 0) {
+                        span.attr('style', $(spans[0]).attr('style'));
+                        span.attr('id', $(spans[0]).attr('id'));
+                    }
+                    span.html(value);
+                    var p = $('<p></p>');
+                    var ps = $jobj(id).find('p');
+                    if(ps.length > 0) {
+                        p.attr('style', $(ps[0]).attr('style'));
+                        p.attr('id', $(ps[0]).attr('id'));
+                    }
+                    p.append(span);
+                    value = $('<div></div>').append(p).html();
+                }
+
                 element.innerHTML = value;
             });
 
@@ -316,7 +340,7 @@ $axure.internal(function($ax) {
 
     _exprFunctions.GetFocusedWidgetText = function() {
         if(window.lastFocusedControl) {
-            return window.lastFocusedControl.value;
+            return $ax('#' + window.lastFocusedControl).text();
         } else {
             return "";
         }
@@ -328,14 +352,15 @@ $axure.internal(function($ax) {
         if($ax.placeholderManager.isActive(id)) return 0;
         var obj = $jobj($ax.INPUT(id));
         if(!obj.length) obj = $jobj(id);
-        return obj[0].value.length;
+        var val = obj[0].value || _exprFunctions.GetWidgetText([id]);
+        return val.length;
     };
 
     _exprFunctions.GetPanelState = function(ids) {
         var id = ids[0];
         if(!id) return undefined;
         var stateId = $ax.visibility.GetPanelState(id);
-        return stateId && $jobj(stateId).data('label');
+        return stateId && String($jobj(stateId).data('label'));
     };
 
     _exprFunctions.GetWidgetVisibility = function(ids) {
@@ -400,7 +425,17 @@ $axure.internal(function($ax) {
     _exprFunctions.GetWidgetRectangles = function(elementId, eventInfo) {
         var rects = new Object();
         var jObj = $jobj(elementId);
-        if(jObj.length == 0) {
+        var invalid = jObj.length == 0;
+        var parent = jObj;
+        // Or are in valid if no obj can be found, or if it is not visible.
+        while(parent.length != 0 && !parent.is('body')) {
+            if(parent.css('display') == 'none') {
+                invalid = true;
+                break;
+            }
+            parent = parent.parent();
+        }
+        if(invalid) {
             rects.lastRect = rects.currentRect = new $ax.drag.Rectangle(-1, -1, -1, -1);
             return rects;
         }
@@ -447,7 +482,7 @@ $axure.internal(function($ax) {
 
     _exprFunctions.ToString = function(value) {
         if(value.isWidget) {
-            return value.Text;
+            return value.text;
         }
         return String(value);
     };

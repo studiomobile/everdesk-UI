@@ -64,6 +64,8 @@
   width:95px;
   height:16px;
   font-family:'HelveticaNeue', 'Helvetica Neue';
+  font-weight:400;
+  font-style:normal;
   font-size:21px;
   color:#000000;
 }
@@ -111,6 +113,8 @@
   width:170px;
   height:25px;
   font-family:'HelveticaNeue', 'Helvetica Neue';
+  font-weight:400;
+  font-style:normal;
   font-size:21px;
   color:#000000;
   text-align:center;
@@ -203,6 +207,7 @@
   height:16px;
   font-family:'Arial-BoldMT', 'Arial Bold', 'Arial';
   font-weight:700;
+  font-style:normal;
   font-size:14px;
   color:#666666;
 }
@@ -301,6 +306,7 @@
   height:32px;
   font-family:'Arial-BoldMT', 'Arial Bold', 'Arial';
   font-weight:700;
+  font-style:normal;
   font-size:14px;
   color:#666666;
 }
@@ -399,6 +405,7 @@
   height:16px;
   font-family:'Arial-BoldMT', 'Arial Bold', 'Arial';
   font-weight:700;
+  font-style:normal;
   font-size:14px;
   color:#666666;
 }

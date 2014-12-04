@@ -64,6 +64,8 @@
   width:95px;
   height:16px;
   font-family:'HelveticaNeue', 'Helvetica Neue';
+  font-weight:400;
+  font-style:normal;
   font-size:21px;
   color:#000000;
 }
@@ -156,6 +158,8 @@
   width:95px;
   height:16px;
   font-family:'HelveticaNeue', 'Helvetica Neue';
+  font-weight:400;
+  font-style:normal;
   font-size:21px;
   color:#000000;
 }
@@ -247,6 +251,8 @@
   width:30px;
   height:30px;
   font-family:'FontAwesome', 'FontAwesome';
+  font-weight:400;
+  font-style:normal;
   font-size:24px;
   color:#2087FC;
 }
@@ -271,6 +277,8 @@
   width:30px;
   height:30px;
   font-family:'FontAwesome', 'FontAwesome';
+  font-weight:400;
+  font-style:normal;
   font-size:24px;
   color:#2087FC;
 }
@@ -390,6 +398,8 @@
   width:170px;
   height:25px;
   font-family:'HelveticaNeue', 'Helvetica Neue';
+  font-weight:400;
+  font-style:normal;
   font-size:21px;
   color:#000000;
   text-align:center;

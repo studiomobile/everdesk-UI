@@ -52,6 +52,7 @@
         var repeaterIdToScriptIds = {};
         var repeaterIdToItemIds = {};
         var scriptIdToPath = {};
+        var _scriptIds = [];
         var elementIdToText = {};
         var radioGroupToSelectedElementId = {};
         _initializePageData = function() {
@@ -83,6 +84,7 @@
                 diagramObject.scriptIds[diagramObject.scriptIds.length] = scriptId;
 
                 scriptIdToObject[scriptId] = diagramObject;
+                _scriptIds[_scriptIds.length] = scriptId;
             }
 
             // Now map scriptIds to repeaters
@@ -137,6 +139,7 @@
             var current = $ax.pageData.objectPaths;
             for(var i = 0; i < path.length; i++) {
                 current = current[path[i]];
+                if(!current) return current;
             }
             return current && current.scriptId;
         };
@@ -183,10 +186,16 @@
 
         var _getElementsIdFromEventAndScriptId = function(eventInfo, scriptId) {
             var itemId = eventInfo && $ax.repeater.getItemIdFromElementId(eventInfo.srcElement);
+            var target = false;
+            // Try to get itemId from target if you can't get it from source.
+            if(!itemId) {
+                itemId = eventInfo && eventInfo.targetElement && $ax.repeater.getItemIdFromElementId(eventInfo.targetElement);
+                if(itemId) target = true;
+            }
 
             var parentRepeater = $ax.getParentRepeaterFromScriptId(scriptId);
             if(parentRepeater && scriptId != parentRepeater) {
-                if(itemId && (!eventInfo || parentRepeater == $ax.getParentRepeaterFromScriptId($ax.repeater.getScriptIdFromElementId(eventInfo.srcElement)))) {
+                if(itemId && (!eventInfo || parentRepeater == $ax.getParentRepeaterFromScriptId($ax.repeater.getScriptIdFromElementId(target ? eventInfo.targetElement : eventInfo.srcElement)))) {
                     return [$ax.repeater.createElementId(scriptId, itemId)];
                 }
                 var elementIds = [];
@@ -212,6 +221,7 @@
         var _getEventInfoFromEvent = function(event, skipShowDescriptions, elementId) {
             var eventInfo = {};
             eventInfo.srcElement = elementId;
+            eventInfo.now = new Date();
 
             if(event != null) {
                 //elementId can be empty string, so can't simple use "or" assignment here.
@@ -220,6 +230,7 @@
 
                 // When getting locations in mobile, need to extract the touch object to get the mouse location attributes
                 var mouseEvent = (event.originalEvent && event.originalEvent.changedTouches && event.originalEvent.changedTouches[0]) || event.originalEvent;
+                if(mouseEvent && !mouseEvent.type) mouseEvent.type = event.type;
 
                 if(skipShowDescriptions) eventInfo.skipShowDescriptions = true;
 
@@ -326,7 +337,7 @@
 
             // repeater only props
             if(obj.type == 'repeater') {
-                widget.visibleitemcount = repeaterIdToItemIds[scriptId] ? repeaterIdToItemIds[scriptId].length : 0;
+                widget.visibleitemcount = repeaterIdToItemIds[scriptId] ? repeaterIdToItemIds[scriptId].length : $ax.repeater.getVisibleDataCount(scriptId);
                 widget.itemcount = $ax.repeater.getFilteredDataCount(scriptId);
                 widget.datacount = $ax.repeater.getDataCount(scriptId);
                 widget.pagecount = $ax.repeater.getPageCount(scriptId);
@@ -366,20 +377,19 @@
 
         $ax.getAllElementIds = function() {
             var elementIds = [];
-            for(var scriptId in scriptIdToObject) {
+            for(var i = 0; i < _scriptIds.length; i++) {
+                var scriptId = _scriptIds[i];
                 var repeaterId = scriptIdToRepeaterId[scriptId];
                 if(repeaterId && repeaterId != scriptId) {
                     var itemIds = repeaterIdToItemIds[repeaterId] || [];
-                    for(var i = 0; i < itemIds.length; i++) elementIds[elementIds.length] = $ax.repeater.createElementId(scriptId, itemIds[i]);
+                    for(var j = 0; j < itemIds.length; j++) elementIds[elementIds.length] = $ax.repeater.createElementId(scriptId, itemIds[j]);
                 } else elementIds[elementIds.length] = scriptId;
             }
             return elementIds;
         };
 
         $ax.getAllScriptIds = function() {
-            var scriptIds = [];
-            for(var scriptId in scriptIdToObject) scriptIds.push(scriptId);
-            return scriptIds;
+            return _scriptIds;
         };
 
         $ax.getObjectFromElementId = function(elementId) {
@@ -502,7 +512,7 @@
                 } else if(to.target == "parentFrame") {
                     targetLocation = parent.location;
                 } else if(to.target == "frame") {
-//                    targetLocation = to.frame.contentWindow.location;
+                    //                    targetLocation = to.frame.contentWindow.location;
                     $(to.frame).attr('src', targetUrl || 'about:blank');
                     return;
                 }
@@ -520,18 +530,6 @@
                 includeVariables: arguments[1]
             });
         }
-    };
-
-    $ax.public.getArgs = $ax.getArgs = function() {
-        var args = {};
-        if(window.location.search) {
-            var pairs = window.location.search.slice(1).split('&');
-            pairs.forEach(function(pair) {
-                pair = pair.split('=');
-                args[pair[0]] = decodeURIComponent(pair[1] || '');
-            });
-        }
-        return args;
     };
 
     var _needsReload = function(oldLocation, newBaseUrl) {
